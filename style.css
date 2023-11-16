@@ -1,0 +1,195 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Reset */
+li {
+    list-style-type: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+    box-sizing: border-box; 
+}
+
+/* Mobile First */
+
+.container {
+    display: grid; 
+    justify-content: center;
+    max-width: 375px;
+    margin: auto; 
+    background-color: white;
+}
+
+.scorecard {
+    color: hsl(221, 100%, 96%);
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 25px;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.totalscore {
+    border-radius: 50%;
+    height: 150px;
+    aspect-ratio: 1;
+    text-align: center;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.yourscore {
+    font-size: 3.4rem;
+    font-weight: 800;
+    margin: 0;
+    color: white;
+}
+.total {
+    margin: 0;
+    color: hsla(241, 100%, 89%, 0.6);
+}
+.scorecard_title {
+    margin: 15px 0 10px 0;
+}
+h2.scorecard_title {
+    color: white;
+}
+.scorecard_text {
+    font-size: 1rem;
+    padding: 0 40px;
+    margin: 0 0 35px 0;
+    color: hsl(241, 100%, 89%);
+}
+
+.summary {
+    padding: 20px;
+    /* min-width: 335px; - detailed score starts to go to 2 lines intead of one -- max width containder is set at 375px*/
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+h2.summary_title {
+    font-size: 1.3rem;
+    margin: 0 0 20px 0;
+}
+p.score, p.category_text {
+    display: inline-block;
+}
+.outof {
+    margin: 0;
+    color: hsla(224, 30%, 27%, 0.5);
+}
+.category {
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 8px 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr 4fr 1.5fr 2fr;
+    gap: 12px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+p.category_text {
+    font-weight: 700;
+}
+.score {
+    grid-column: 4 / span 2;
+    color: hsl(224, 30%, 27%);
+    font-weight: 800;
+    justify-self: end;
+}
+
+svg {
+    display: block;
+    margin: auto;
+}
+.reaction {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+.reaction:hover {
+    border: 1px solid hsla(0, 100%, 67%, 0.1);
+}
+.reaction:hover > svg {
+    transform: scale(2);
+    transition: transform 330ms ease-in-out;
+}
+.memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+.memory:hover {
+    border: 1px solid hsla(39, 100%, 56%, 0.1);
+}
+.memory:hover > svg {
+    transform: scale(1.5);
+    transition: transform 330ms ease-in-out;
+}
+.verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.verbal:hover {
+    border: 1px solid hsla(166, 100%, 37%, 0.1);
+}
+.verbal:hover > svg {
+    transform: scale(1.5);
+    transition: transform 330ms ease-in-out;
+}
+.visual {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.visual:hover {
+    border: 1px solid hsla(234, 85%, 45%, 0.1);
+}
+.visual:hover > svg {
+    transform: scale(1.5);
+    transition: transform 330ms ease-in-out;
+}
+.btn {
+    border-radius: 40px;
+    border: none;
+    padding: 15px;
+    margin-top: 25px;
+    background-color: hsl(224, 30%, 27%);
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.btn:hover {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.attribution {
+    margin-top: 50px;
+}
+
+
+/* Desktop */ 
+@media screen and (min-width: 780px)  {
+    .container {
+        grid-template-columns: repeat(2, minmax(0, 350px));
+        margin-top: 50px;
+        max-width: 700px;
+        border-radius: 25px;
+        box-shadow: 8px 8px 60px 12px hsla(241, 72%, 46%, 0.2);
+    }
+    .summary { 
+        border-radius: 0 25px 25px 0;
+        background-color: white;
+        padding: 20px 30px;
+    }
+
+}
